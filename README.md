@@ -10,13 +10,17 @@ The new Excel file have 5 parts:
 
 - Part 2 - It is formed by 2 sheets and they are two databases:
     - Pacients
-      - Have the diferent clients. One line is a unique client. The fields we wanted for further analysis are:
-                 -c
-                 -
+      - Have the diferent clients
+      - One line is a unique client
+      - The fields we wanted for further analysis are:
+            - c
+            - cc
     - Seances
-       - Have the differents appoinments with the differents clients. It can have many lines for the same pacient. The fields we wanted for further analysis are:
-                - cc
-                - z
+       - Have the differents appoinments with the differents clients
+       - It can have many lines for the same pacient
+       - The fields we wanted for further analysis are:
+            - cc
+            - z
 - Part 3 - It is formed by 3 sheets and they are the formularies to entry the information to the differents fileds of the databases sheets:
     - Formulaire Pacient
     - Formulaire Seance
