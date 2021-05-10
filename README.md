@@ -21,7 +21,7 @@ The new Excel file have 5 parts:
        - The fields we wanted for further analysis are:
             - cc
             - z
-- Part 3 - It is formed by 3 sheets and they are the formularies to entry the information to the differents fileds of the databases sheets:
+- Part 3 - It is formed by 3 sheets and they are the formularies to entry the information to the differents fields of the databases sheets:
     - Formulaire Pacient
     - Formulaire Seance
     - Formulaire Facture
