@@ -10,8 +10,8 @@ The new Excel file have 5 parts:
 
 - Part 2 - It is formed by 2 sheets and they are two databases:
   - Pacients have the diferent clients. One line is a unique client. The fields we wanted for further analysis are:
-    -
-    -  
+      - 
+      -  
   - Seances have the differents appoinments with the differents clients. It can have many lines for the same pacient. The fields we wanted for further analysis are:
     - cc
     - z
