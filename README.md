@@ -63,13 +63,83 @@ The new Excel file have 5 parts:
     - Seances
        - Have the differents appoinments with the differents clients
        - It can have many lines for the same pacient
-       - The fields we wanted for further analysis are:
-            - cc
-            - z
+       - The fields are divided in 3 blocks:
+           - White fields
+                - These fields are the cells on which the information collected in the Formulaire Seances will be copied.
+                - These fields are:
+                    - DATE  SEANCE
+                    - MODE DE PAIEMENT
+                    - TYPE DE SESSION
+                    - POURCENTAGE
+           - Blue fields
+                - These fields are cells with formulas and they should not be modified
+                - These fields are:
+                    - CODE SEANCE - Unique code for each session
+                    - PACIENT - Concatenation of the patient's name and surname
+                    - PRIX  SEANCE - Price of the session (It is filled in automatically when entering the type of session in the session form)
+                    - PROPRE BÉNÉFICE - Calculates the benefit for the user according to the percentage indicated in the session form
+                    - CLINIC BÉNÉFICE - Calculates the benefit for the clinic according to the percentage indicated in the session form
+                    - TOTAL BÉNÉFICE - Calculate the total profit of the session, which must coincide with the price of the session
+                    - STATUS - It tells us if the session is paid or not based on what is indicated in the PAYÉ cell
+           - Hidden fields
+                - These fields are child cells for calculations and background tasks
+                - These fields are:
+                    -  status_2 - Used for calculations in the Patients sheet
+                    -  DATE SEANCE + PACIENT + FACT - Used for calculations in the Formulaire Invoice sheet
+                    -  AN - Used to calculate the formulas of the Rapport Seances sheet
+                    -  SEANCES - Used to calculate the formulas of the Rapport Seances sheet
+                    -  Column1 - Separation cell
+                    -  PATIENT - Receive the information from the Formulaire Seances cells
+                    -  DATE SEANCE (DD / MM / YYYY) - Receive the information from the Formulaire Seances cells
+                    -  MODE DE PAIEMENT2 - Receive the information of the Formulaire Seances cells
+                    -  TYPE DE SESSION2 - Receive the information of the Formulaire Seances cells
+                    -  TYPE DE GAGNER2 - Receive the cell information of Formulaire Seances
 - Part 3 - It is formed by 3 sheets and they are the formularies to entry the information to the differents fields of the databases sheets:
     - Formulaire Pacient
+        - The fields are divided in 2 blocks:
+            - Grey fields
+                - These fields are cells with formulas and they should not be modified
+                - These fields are:
+                    - CODE PATIENT - Generates a unique and consecutive code for each new patient
+                    - DATE DE SORTIE - Generates the date on which the new patient is discharged
+            - White fields
+                - These fields are the cells that must be filled in to collect the patient's information
+                - These fields are:
+                    - PRENOM - Patient name
+                    - NOM1 - Patient's last name
+                    - DATE NAISSANCE (DD / MM / YYYY) - Patient's year of birth
+                    - PATHOLOGIE - Pathology for which the patient attends consultation
+                    - OBSERVATIONS - Other relevant observations about the patient
+                    - TELEPHONE1 - Patient's main phone
+                    - TELEPHONE2 - Another phone to locate the patient
+                    - EMAIL1 - Patient's email
+                    - EMAIL2 - Secondary email of the patient
+                    - DEPARTEMENT - Department to which the patient belongs
+                    - COMMUNE - Town to which the patient belongs
+                    - ADRESSE - Patient address
     - Formulaire Seance
+        - The fields are divided in 2 blocks:
+            - Grey fields
+                - These fields are cells with formulas and they should not be modified
+                - These fields are:
+                    - CODE SEANCE- Generates a unique and consecutive code for each new query
+            - White fields
+                - These fields are the cells that must be filled in to collect the season's information
+                - These fields are:
+                    - PATIENT - This cell is filled in as a list. The list is made up of each of the patients discharged to date
+                    - DATE SEANCE (DD / MM / YYYY) - Date of the session
+                    - MODE DE PAIEMENT - Session payment method
+                    - TYPE OF SESSION - Type of session (Each type of session has a price)
+                    - POURCENTAGE - Type of percentage that is applied to the session depending on whether the patient is seen at the collaborating clinic or at the therapist's home 
     - Formulaire Facture
+        - This form is a template to generate invoices
+        - The fields are divided into 4 parts:
+            - Fixed fields that do not change (Clinic or therapist data)
+            - Fields that can be modified by the user (Invoice No., Data Seance or Km)
+            - Automated fields that autocomplete based on another field:
+                - The patient's data is filled in according to the Invoice No. entered
+                - Detail of the Performance and Tarif Applique are filled according to what was entered in Data Seance and Km
+                - Hidden fields that are autocompleted and used to autocomplete other fields on the same sheet
 
 - Part 4 - This is a sheet to see individualy the relevant information of each pacient
 
