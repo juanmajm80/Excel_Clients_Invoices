@@ -140,7 +140,31 @@ The new Excel file have 5 parts:
                 - The patient's data is filled in according to the Invoice No. entered
                 - Detail of the Performance and Tarif Applique are filled according to what was entered in Data Seance and Km
                 - Hidden fields that are autocompleted and used to autocomplete other fields on the same sheet
-
 - Part 4 - This is a sheet to see individualy the relevant information of each pacient
-
-- Part 5 - It is formed by 3 sheets and they are dashboards to visualizaice the important data of the 2 databases sheets
+    - The fields are divided into 2 parts:
+        - Blue field - This field contains the list of patients
+        - White fields - These fields are auto-filled with relevant patient information
+- Part 5 - It is formed by 2 sheets and they are dashboards to visualizaice the important data of the 2 databases sheets
+    - Rapport Patients
+        - This sheet is a report to know the patient data
+        - It gives us the information of:
+            - Number of total clients
+            - Number of clients that are pending payment and up-to-date with payments (Can be filtered by year)
+            - 2 graphics:
+                - Number of clients based on their age
+                - Number of clients depending on their population
+    - Rapport Seances
+        - This sheet is a report on the session data
+        - It gives us information on:
+            - Total number of sessions carried out (Can be filtered by year)
+            - Total benefits (Can be filtered by year)
+            - Therapist benefit (May filter by year)
+            - Benefit of the collaborating clinic (Can be filtered by the year)
+            - 7 graphs modifiable from a time filter (by years, months, quarters and days):
+                - Number of sessions for each client
+                - Number of total sessions
+                - Total number of benefits (It does not take into account if the benefit is from the therapist or from the clinic)
+                - Benefit Sharing (Cumulative bar graph showing the benefits of the therapist and the clinic separately)
+                - Number of sessions depending on the payment method used
+                - Number of sessions depending on the type of session
+                - Number of sessions depending on the percentage applied to the prices of each consultation
