@@ -96,6 +96,9 @@ The new Excel file have 5 parts:
                     -  TYPE DE GAGNER2 - Receive the cell information of Formulaire Seances
 - Part 3 - It is formed by 3 sheets and they are the formularies to entry the information to the differents fields of the databases sheets:
     - Formulaire Pacient
+        - This sheet contains 2 macros:
+            - Macro to create a new row in the Patients sheet and add the white fields to that new line
+            - Macro to clean the form in case of error
         - The fields are divided in 2 blocks:
             - Grey fields
                 - These fields are cells with formulas and they should not be modified
@@ -118,6 +121,9 @@ The new Excel file have 5 parts:
                     - COMMUNE - Town to which the patient belongs
                     - ADRESSE - Patient address
     - Formulaire Seance
+        - This sheet contains 2 macros:
+            - Macro to create a new row in the Patients sheet and add the white fields to that new line
+            - Macro to clean the form in case of error 
         - The fields are divided in 2 blocks:
             - Grey fields
                 - These fields are cells with formulas and they should not be modified
